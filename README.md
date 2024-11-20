@@ -5,26 +5,33 @@ This microservice allows you to retrieve information about movies from a local I
 UML sequence:
 
 1. Client Sends Request:
+   
         The client (e.g., a requesting program) creates a request containing a tconst (movie identifier) and a datatype (e.g., "year," "runtime," or "genres").
         This request is sent to the ZeroMQ Communication Pipe.
    
 3. CommPipe Forwards Request:
+   
         The ZeroMQ pipe passes the request to the Movie Data Microservice for processing.
 
-4. Microservice Queries IMDb Dataset:
+5. Microservice Queries IMDb Dataset:
+   
         The Movie Data Microservice processes the request by querying the local IMDb Dataset using the provided tconst to locate the movie.
 
 4.IMDb Dataset Responds:
+
         The dataset returns the requested information (e.g., the release year, runtime, or genres of the movie) or an error if the movie is not found.
 
-5.Microservice Sends Response:
+5.Microservice Sends Response
+
         The Movie Data Microservice formats the response as a JSON object containing the requested data or an error message (e.g., "Movie not found").
         It sends this response back to the CommPipe.
 
 6.CommPipe Forwards Response:
+
         The ZeroMQ Communication Pipe passes the response to the Client.
 
 7. Client Receives Response:
+   
         The client receives and processes the JSON response, which includes either the requested movie data or an error message.
 
 
