@@ -40,10 +40,10 @@ UML sequence:
 
 
 
-Communication Contract
+--Communication Contract--
 
 
-Request Format:
+# Request Format:
 
 Parameters:
 
@@ -70,7 +70,7 @@ print("Response:", response)
 
 
 
-Response Format:
+# Response Format:
 
 JSON object with the requested data or an error message.
 
