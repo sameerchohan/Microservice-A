@@ -16,9 +16,7 @@ Parameters:
 tconst (string): IMDb identifier for the movie (e.g., tt1234567).
 datatype (string): Type of data requested, one of year, runtime, or genres.
 Example Request (Python Code):
-
-python
-Copy code
+"
 import zmq
 
 context = zmq.Context()
@@ -32,6 +30,10 @@ request = {
 socket.send_json(request)
 response = socket.recv_json()
 print("Response:", response)
+"
+
+
+
 Response Format:
 
 JSON object with the requested data or an error message.
@@ -43,11 +45,10 @@ datatype (string): Data type requested.
 data (varies): The requested data (e.g., year, runtime, or genres).
 error (string, optional): Error message if the request cannot be fulfilled.
 Example Response:
-
-json
-Copy code
+"
 {
     "tconst": "tt1234567",
     "datatype": "runtime",
     "data": "142 minutes"
 }
+"
