@@ -66,10 +66,10 @@ print("Response:", response)
 ### Response Format:
 
 #### JSON Object Fields:
--tconst (string): IMDb identifier of the movie.
--datatype (string): Data type requested.
--data (varies): The requested data (e.g., year, runtime, or genres).
--error (string, optional): Error message if the request cannot be fulfilled.
+- **tconst** (string): IMDb identifier of the movie.
+- **datatype** (string): Data type requested.
+- **data** (varies): The requested data (e.g., year, runtime, or genres).
+- **error** (string, optional): Error message if the request cannot be fulfilled.
 #### Example Response:
    ```
 {
