@@ -20,6 +20,7 @@ Parameters:
 
 tconst (string): IMDb identifier for the movie (e.g., tt1234567).
 datatype (string): Type of data requested, one of year, runtime, or genres.
+
 Example Request (Python Code):
 "
 import zmq
@@ -46,9 +47,14 @@ JSON object with the requested data or an error message.
 Fields:
 
 tconst (string): IMDb identifier of the movie.
+
 datatype (string): Data type requested.
+
 data (varies): The requested data (e.g., year, runtime, or genres).
+
 error (string, optional): Error message if the request cannot be fulfilled.
+
+
 Example Response:
 "
 {
