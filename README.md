@@ -2,7 +2,7 @@
 This microservice allows you to retrieve information about movies from a local IMDb dataset using ZeroMQ for communication. It provides three data types: year, runtime, and genres.
 
 
-UML sequence:
+# UML sequence:
 
 1. Client Sends Request:
    
@@ -40,7 +40,7 @@ UML sequence:
 
 
 
---Communication Contract--
+# --Communication Contract--
 
 
 # Request Format:
