@@ -14,6 +14,8 @@ Microservice sends a JSON response back to the client.
 
 
 Communication Contract
+
+
 Request Format:
 
 Parameters:
@@ -22,7 +24,7 @@ tconst (string): IMDb identifier for the movie (e.g., tt1234567).
 datatype (string): Type of data requested, one of year, runtime, or genres.
 
 Example Request (Python Code):
-"
+
 import zmq
 
 context = zmq.Context()
@@ -36,7 +38,8 @@ request = {
 socket.send_json(request)
 response = socket.recv_json()
 print("Response:", response)
-"
+
+
 
 
 
@@ -56,10 +59,10 @@ error (string, optional): Error message if the request cannot be fulfilled.
 
 
 Example Response:
-"
+
 {
     "tconst": "tt1234567",
     "datatype": "runtime",
     "data": "142 minutes"
 }
-"
+
